@@ -1,0 +1,115 @@
+:root{
+    --Purple: hsl(259, 100%, 65%);
+--Light-red: hsl(0, 100%, 67%);
+--White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+
+}
+@font-face {
+    font-family: pop;
+ src: url(assets/fonts/Poppins-Italic.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: pop;
+}
+body{
+
+    background-color: var(--Off-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    background-color: var(--White);
+    width: 420px;
+    max-width: 90%;
+    padding: 10px;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 150px;
+}
+input{
+    width: 70px;
+    outline: none;
+    border: 2px solid var(--Off-white);
+    padding: 10px;
+    border-radius: 10px;
+}
+input:focus{
+    border: 2px solid var(--Purple);
+}
+label{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+small{
+    font-size: 8px;
+    color: red;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.submit-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Purple);
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.output span{
+    font-size: 40px;
+    color: var(--Purple);
+    font-style: italic;
+}
+
+.input-flex{
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--Off-white);
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px 20px;
+}
+#rotate-image{
+    transition: transform 1s;
+    
+}
+
+@media only screen  and (max-width:750px){
+input{
+    width: 100%;
+}
+.output span{
+    font-size: 1.9rem;
+}
+.submit-btn{
+    width: 40px;
+    height: 40px;
+    left: 40%;
+    top: 60px;
+
+}
+.submit-btn img{
+    transform: scale(0.5);
+}
+}
